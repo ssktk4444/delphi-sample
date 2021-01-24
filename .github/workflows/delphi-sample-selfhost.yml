@@ -19,6 +19,6 @@ jobs:
       - run: SET PlatformSDK=
       - run: SET CG_BOOST_ROOT="C:\\Program Files (x86)\\Embarcadero\\Studio\\20.0\\include\\boost_1_39"
       - run: SET CG_64_BOOST_ROOT="C:\\Program Files (x86)\\Embarcadero\\Studio\\20.0\\include\\boost_1_50"
-      - run: dir C:\Users\Administrator\actions-runner\_work > C:\Users\Administrator\Desktop\result.txt
+      - run: dir C:\Users\Administrator\actions-runner\_work\delphi-sample > C:\Users\Administrator\Desktop\result.txt
       - run: C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\msbuild /target:Build /property:config=Release;UsePackages=false /verbosity:q CardPanel.dproj
       - run: copy Win32\Release\CardPanel.exe C:\Users\Administrator\Desktop
