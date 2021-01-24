@@ -8,7 +8,9 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
-      - run: SET BDS=C:\\Program Files (x86)\\Embarcadero\\Studio\\20.0
+      - run: 
+          dir > C:\Users\Administrator\Desktop\result.txt
+          SET BDS=C:\\Program Files (x86)\\Embarcadero\\Studio\\20.0
           SET BDSINCLUDE=C:\\Program Files (x86)\\Embarcadero\\Studio\\20.0\\include
           SET BDSCOMMONDIR=C:\\Users\\Public\\Documents\\Embarcadero\\Studio\\20.0
           SET FrameworkDir=C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319
@@ -21,6 +23,5 @@ jobs:
           SET CG_BOOST_ROOT=C:\\Program Files (x86)\\Embarcadero\\Studio\\20.0\\include\\boost_1_39
           SET CG_64_BOOST_ROOT=C:\\Program Files (x86)\\Embarcadero\\Studio\\20.0\\include\\boost_1_50
           C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\msbuild /target:Build /property:config=Release;UsePackages=false /verbosity:q CardPanel.dproj
-          dir > C:\Users\Administrator\Desktop\result.txt
           copy Win32\Release\CardPanel.exe C:\Users\Administrator\Desktop
         shell: cmd
