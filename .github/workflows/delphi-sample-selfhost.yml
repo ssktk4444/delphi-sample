@@ -9,7 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          dir > C:\Users\Administrator\Desktop\result.txt
           SET BDS=C:\\Program Files (x86)\\Embarcadero\\Studio\\20.0
           SET BDSINCLUDE=C:\\Program Files (x86)\\Embarcadero\\Studio\\20.0\\include
           SET BDSCOMMONDIR=C:\\Users\\Public\\Documents\\Embarcadero\\Studio\\20.0
