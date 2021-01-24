@@ -7,6 +7,7 @@ jobs:
   delphi_sample:
     runs-on: self-hosted
     steps:
+      - uses: actions/checkout@v2
       - run: dir C:\Users\Administrator\actions-runner\_work\delphi-sample\delphi-sample > C:\Users\Administrator\Desktop\result.txt
       - run: SET BDS="C:\\Program Files (x86)\\Embarcadero\\Studio\\20.0"
       - run: SET BDSINCLUDE="C:\\Program Files (x86)\\Embarcadero\\Studio\\20.0\\include"
